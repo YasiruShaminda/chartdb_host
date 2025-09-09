@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ChartDBLogo from '@/assets/logo-light.png';
 import ChartDBDarkLogo from '@/assets/logo-dark.png';
 import { useTheme } from '@/hooks/use-theme';
@@ -11,6 +12,12 @@ export interface TopNavbarProps {}
 
 export const TopNavbar: React.FC<TopNavbarProps> = () => {
     const { effectiveTheme } = useTheme();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem('isAuthenticated');
+        navigate('/login');
+    };
 
     const renderStars = useCallback(() => {
         return (
@@ -50,6 +57,12 @@ export const TopNavbar: React.FC<TopNavbarProps> = () => {
                 <LastSaved />
                 {renderStars()}
                 <LanguageNav />
+                <button
+                    onClick={handleLogout}
+                    className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+                >
+                    Logout
+                </button>
             </div>
         </nav>
     );
