@@ -73,20 +73,21 @@ module.exports = {
     		},
     		keyframes: {
     			'accordion-down': {
-    				from: {
-    					height: '0'
-    				},
-    				to: {
-    					height: 'var(--radix-accordion-content-height)'
-    				}
+    				from: { height: '0' },
+    				to: { height: 'var(--radix-accordion-content-height)' }
     			},
     			'accordion-up': {
-    				from: {
-    					height: 'var(--radix-accordion-content-height)'
-    				},
-    				to: {
-    					height: '0'
-    				}
+    				from: { height: 'var(--radix-accordion-content-height)' },
+    				to: { height: '0' }
+    			},
+    			'fade-in': {
+    				'0%': { opacity: '0' },
+    				'100%': { opacity: '1' }
+    			},
+    			'shake': {
+    				'0%, 100%': { transform: 'translateX(0)' },
+    				'25%': { transform: 'translateX(-8px)' },
+    				'75%': { transform: 'translateX(8px)' }
     			},
     			scale: {
     				'0%': {
@@ -124,7 +125,9 @@ module.exports = {
     			'accordion-up': 'accordion-up 0.2s ease-out',
     			scale: 'scale 1s ease-in-out 1',
     			'scale-2': 'scale-2 1s ease-in-out 2',
-    			blink: 'blink 1s infinite'
+    			blink: 'blink 1s infinite',
+    			'fade-in': 'fade-in 0.5s ease-in',
+    			'shake': 'shake 0.5s ease-in-out'
     		}
     	}
     },
