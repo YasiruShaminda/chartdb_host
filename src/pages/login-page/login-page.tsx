@@ -9,7 +9,7 @@ export const LoginPage = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        if (username === 'admin' && password === 'password') {
+        if (username === 'admin' && password === 'nvision@pwd123') {
             localStorage.setItem('isAuthenticated', 'true');
             navigate('/');
         } else {
