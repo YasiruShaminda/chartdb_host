@@ -18,8 +18,8 @@ export const LoginPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-blue-200">
-            <div className="w-full max-w-md p-8 flex flex-col items-center bg-white rounded-xl shadow-lg animate-fade-in">
+        <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-100 via-white to-blue-200">
+            <div className="flex w-full max-w-md animate-fade-in flex-col items-center rounded-xl bg-white p-8 shadow-lg">
                 <img
                     src={ChartDBLogo}
                     alt="ChartDB Logo"
@@ -31,7 +31,7 @@ export const LoginPage = () => {
                 <p className="mb-6 text-center text-gray-500">
                     Sign in to continue to your dashboard
                 </p>
-                <div className="w-full flex flex-col gap-4">
+                <div className="flex w-full flex-col gap-4">
                     <input
                         type="text"
                         placeholder="Username"
@@ -48,7 +48,7 @@ export const LoginPage = () => {
                         className="w-full rounded-lg border px-4 py-2 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400"
                     />
                     {error && (
-                        <div className="text-center text-sm text-red-500 animate-shake">
+                        <div className="animate-shake text-center text-sm text-red-500">
                             {error}
                         </div>
                     )}
